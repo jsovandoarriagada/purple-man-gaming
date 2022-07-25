@@ -1,0 +1,33 @@
+/* FOOTER */
+@import "../utilities/mixins";
+
+.footer {
+  background-color: #161618;
+  font-weight: 400;
+  padding: 2rem 0;
+
+  // FOOTER: LAYOUT
+  &__layout {
+    @include flex-base(column, 1.5rem);
+    @include flex-alignment(center, center);
+  }
+
+  // FOOTER: COPYRIGHT
+  &__copyright {
+    @include flex-base(column, 1rem);
+    @include flex-alignment(center, center);
+  }
+
+  &__purple {
+    color: #a153f9;
+  }
+
+  &__author {
+    @include flex-base(column, 0);
+    @include flex-alignment(center, center);
+  }
+
+  &__green {
+    color: #00e205;
+  }
+}

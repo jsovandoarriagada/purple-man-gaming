@@ -1,0 +1,154 @@
+/* MAIN */
+@import "../components/carousel";
+@import "../components/item";
+@import "../components/product";
+@import "../utilities/mixins";
+
+.main {
+  &__carousel {
+    @include measures(140rem, auto);
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 92.5rem) {
+    &__carousel {
+      @include measures(95%, auto);
+    }
+  }
+
+  // MAIN: PRODUCTS
+  &__products {
+    @include measures(140rem, auto);
+    margin: auto;
+    margin-top: 1rem;
+
+    // PRODUCTS
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+      grid-auto-rows: auto;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 92.5rem) {
+    &__products {
+      @include measures(95%, auto);
+    }
+  }
+
+  &__products--title {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+
+  // MAIN: WISHLIST
+  .wishlist {
+    @include measures(140rem, auto);
+    margin: 6rem auto;
+
+    // WISHLIST: TITLE
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 92.5rem) {
+    .wishlist {
+      @include measures(95%, auto);
+    }
+  }
+
+  // MAIN: CART
+  .cart {
+    @include measures(140rem, auto);
+    margin: 1rem auto;
+
+    // CART: TITLE
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    // CART: CONTAINER
+    &__container {
+      @include flex-base(row, 1rem);
+      @include measures(100%, auto);
+    }
+
+    @media (max-width: 62.5rem) {
+      &__container {
+        @include flex-base(column-reverse, 1rem);
+      }
+    }
+
+    // CART: ITEMS
+    &__items {
+      @include flex-base(column, 1rem);
+      @include measures(100%, auto);
+    }
+
+    // CART: SUMMARY
+    &__summary {
+      @include measures(40rem, auto);
+
+      &--title {
+        @include flex-base(row, 0);
+        @include flex-alignment(start, center);
+        @include measures(auto, 6rem);
+        padding-left: 2rem;
+        background-color: #454546;
+      }
+
+      .summary {
+        @include flex-base(column, 1rem);
+
+        background-color: #161618;
+        padding: 2rem 0;
+
+        &__full,
+        &__discount,
+        &__total {
+          @include flex-base(row, 0);
+          @include flex-alignment(space-between, center);
+          padding: 0 2rem;
+        }
+
+        &__total--value {
+          color: #a153f9;
+        }
+
+        hr {
+          margin: 1rem 2rem;
+        }
+
+        &__proceed {
+          @include flex-base(row, 1rem);
+          @include flex-alignment(center, center);
+          background-color: #a153f9;
+          padding: 1rem 2rem;
+          font-weight: 700;
+          font-size: 1.4rem;
+          color: #161618;
+          border: none;
+          margin: 1rem 2rem 0 2rem;
+        }
+      }
+    }
+
+    @media (max-width: 62.5rem) {
+      &__summary {
+        @include measures(100%, auto);
+      }
+    }
+  }
+
+  @media (max-width: 92.5rem) {
+    .cart {
+      @include measures(95%, auto);
+    }
+  }
+}
