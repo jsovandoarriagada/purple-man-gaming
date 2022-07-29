@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <!-- HEAD: META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Purple Man Gaming" />
+    <meta name="keywords" content="Purple Man Gaming, Games, Game Keys, Buy Game Keys, Steam, Epic Games, Ubisoft" />
+    <meta name="author" content="José Simón Ovando Arriagada" />
+    <!-- HEAD: TITLE -->
+    <title>Purple Man Gaming | Buy Game Keys</title>
+    <!-- HEAD: BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <!-- HEAD: FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    <!-- HEAD: GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <!-- HEAD: STYLES -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- HEAD: TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  </head>
+  <!-- BODY -->
+  <body class="body">
+    <!-- BODY: LAYOUT -->
+    <div class="body__layout">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- HEADER: LAYOUT -->
+        <div class="header__layout">
+          <!-- HEADER: LOGO -->
+          <img class="header__logo" src="./img/logos/logo.png" />
+          <!-- HEADER: MENU -->
+          <div class="header__menu">
+            <!-- HEADER: PRODUCTS -->
+            <i class="fa-solid fa-shop" id="products"></i>
+            <!-- HEADER: CART -->
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+          </div>
+        </div>
+      </header>
+      <!-- MAIN -->
+      <main class="main">
+        <!-- MAIN: CONTAINER -->
+        <div class="main__container">
+          <!-- MAIN: CAROUSEL -->
+          <section class="main__carousel">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./img/carousel/desktop-1.jpg" class="desktop-img w-100" alt="Spider-Man's Remastered Carousel 1" />
+                  <img src="./img/carousel/mobile-1.jpg" class="mobile-img w-100" alt="Spider-Man's Remastered Carousel 1" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/carousel/desktop-2.jpg" class="desktop-img w-100" alt="Spider-Man's Remastered Carousel 2" />
+                  <img src="./img/carousel/mobile-2.jpg" class="mobile-img w-100" alt="Spider-Man's Remastered Carousel 2" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <p class="carousel__soon">COMING SOON</p>
+            </div>
+            <div class="carousel__bar" id="products">
+              <img src="./img/logos/spiderman.png" alt="" />
+              <p>AUG 12, 2022</p>
+            </div>
+          </section>
+          <!-- MAIN: PRODUCTS -->
+          <section class="products">
+            <div class="products__container"></div>
+          </section>
+          <!-- MAIN: CART -->
+          <section class="cart">
+            <div class="cart__container">
+              <ul class="cart__items"></ul>
+              <div class="cart__summary">
+                <div class="summary">
+                  <div class="summary__full">
+                    <p class="summary__full--title">FULL PRICE:</p>
+                    <p class="summary__full--value">$<span id="summary__full"> --</span> USD</p>
+                  </div>
+                  <div class="summary__discount">
+                    <p class="summary__discount--title">YOU SAVE:</p>
+                    <p class="summary__discount--value">$<span id="summary__discount"> --</span> USD</p>
+                  </div>
+                  <hr />
+                  <div class="summary__total">
+                    <p class="summary__total--title">TOTAL:</p>
+                    <p class="summary__total--value">$<span id="summary__total"> --</span> USD</p>
+                  </div>
+                  <div class="summary__buttons">
+                    <button class="summary__proceed" onclick="featureNotAvailable()">PROCEED</button>
+                    <button class="summary__clear" onclick="clearCartItems()">CLEAR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- BODY: BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- BODY: FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ec7e01de85.js" crossorigin="anonymous"></script>
+    <!-- BODY: SWEETALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- BODY: TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- BODY: VARIABLES -->
+    <script src="./js/variables.js"></script>
+    <!-- BODY: PRODUCTS -->
+    <script src="./js/products.js"></script>
+    <!-- BODY: CART -->
+    <script src="./js/cart.js"></script>
+    <!-- BODY: MENU -->
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+@import "../utilities/mixins";
+
+// CAROUSEL
+.carousel {
+  position: relative;
+
+  .desktop-img {
+    display: block;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  @media (max-width: 41.25rem) {
+    .desktop-img {
+      display: none;
+    }
+    .mobile-img {
+      display: block;
+    }
+  }
+
+  &__bar {
+    @include flex-base(row, 0);
+    @include flex-alignment(space-between, center);
+    background-color: #161618;
+    padding: 0.6rem;
+
+    img {
+      @include measures(auto, 3rem);
+    }
+
+    p {
+      background-color: #a153f9;
+      color: #161618;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
+  &__soon {
+    background-color: #da1106;
+    padding: 0.6rem 1.2rem;
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+  }
+}

@@ -1,0 +1,73 @@
+@import "../utilities/mixins";
+
+// PRODUCT
+.product {
+  background-color: #454546;
+  max-width: 60rem;
+
+  // PRODUCT: CONTENT
+  &__content {
+    background-color: #161618;
+  }
+  // PRODUCT: IMAGE
+  &__img {
+    @include measures(100%, auto);
+  }
+
+  // PRODUCT: DISPLAY
+  &__display {
+    @include flex-base(row, 0);
+    @include flex-alignment(space-between, center);
+    margin: 0.6rem 0.8rem;
+  }
+
+  // PRODUCT: PRICE
+  &__cost {
+    @include flex-base(row, 1rem);
+    @include flex-alignment(center, center);
+  }
+
+  &__discount {
+    background-color: #da1106;
+    padding: 0.8rem 1.2rem;
+  }
+
+  &__price--base {
+    text-decoration: line-through;
+    color: #a2a2a3;
+  }
+
+  &__price--final {
+    color: #a153f9;
+  }
+
+  // PRODUCT: PLATFORM
+  &__platform {
+    @include flex-base(row, 0.7rem);
+    @include flex-alignment(center, center);
+    @include measures(auto, 3.5rem);
+  }
+
+  &__platform--img {
+    @include measures(auto, 2.3rem);
+  }
+
+  // PRODUCT: BUTTONS
+  &__button {
+    @include flex-base(row, 1rem);
+    @include flex-alignment(center, center);
+    @include measures(100%, 3.5rem);
+    background-color: #454546;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+
+    &:hover,
+    &:active {
+      background-color: #a153f9;
+      color: #161618;
+    }
+  }
+}

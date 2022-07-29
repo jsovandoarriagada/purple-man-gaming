@@ -1,0 +1,91 @@
+@import "../utilities/mixins";
+
+// ITEM
+.item {
+  @include measures(100%, 6rem);
+  background-color: #454546;
+  display: grid;
+  grid-template-areas: "game game quantity cost cost";
+  grid-template-columns: repeat(5, 1fr);
+
+  &:nth-child(even) {
+    background-color: #161618;
+  }
+
+  // ITEM: GAME
+  &__game {
+    @include flex-base(row, 1rem);
+    @include flex-alignment(start, center);
+    grid-area: game;
+  }
+
+  // ITEM: PLATFORM
+  &__platform {
+    @include flex-base(row, 0.7rem);
+    @include flex-alignment(center, center);
+    @include measures(auto, 3.5rem);
+
+    img {
+      @include measures(auto, 2.3rem);
+    }
+  }
+
+  @media (max-width: 40rem) {
+    &__platform {
+      display: none;
+    }
+  }
+
+  // ITEM: QUANTITY
+  &__quantity {
+    @include flex-base(row, 1rem);
+    @include flex-alignment(center, center);
+    grid-area: quantity;
+
+    .fa-circle-minus {
+      color: #a2a2a3;
+      font-size: 1.8rem;
+    }
+
+    .fa-circle-plus {
+      color: #a153f9;
+      font-size: 1.8rem;
+    }
+  }
+
+  // ITEM: COST
+  &__cost {
+    @include flex-base(row, 1rem);
+    @include flex-alignment(end, center);
+    grid-area: cost;
+  }
+
+  &__discount {
+    background-color: #da1106;
+    padding: 0.8rem 1.2rem;
+  }
+
+  @media (max-width: 40rem) {
+    &__discount {
+      display: none;
+    }
+  }
+
+  &__price--base {
+    text-decoration: line-through;
+    color: #a2a2a3;
+  }
+
+  &__price--final {
+    color: #a153f9;
+  }
+
+  .fa-solid {
+    font-size: 2rem;
+    color: #a2a2a3;
+  }
+
+  .fa-trash {
+    margin-right: 1rem;
+  }
+}

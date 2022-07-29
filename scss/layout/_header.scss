@@ -1,0 +1,44 @@
+/* HEADER */
+@import "../utilities/mixins";
+
+.header {
+  background-color: #161618;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  // HEADER: LAYOUT
+  &__layout {
+    @include flex-base(row, 0);
+    @include flex-alignment(space-between, center);
+    @include measures(120rem, auto);
+    padding: 1.6rem 0;
+    margin: auto;
+  }
+
+  @media (max-width: 80rem) {
+    &__layout {
+      @include measures(95%, auto);
+    }
+  }
+
+  // HEADER: LOGO
+  &__logo {
+    @include measures(auto, 2.6rem);
+  }
+
+  // HEADER: MENU
+  &__menu {
+    @include flex-base(row, 1.6rem);
+    @include flex-alignment(center, center);
+
+    i {
+      font-size: 2.2rem;
+      color: #ffffff;
+
+      &:hover {
+        color: #a153f9;
+      }
+    }
+  }
+}

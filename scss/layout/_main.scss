@@ -1,0 +1,134 @@
+/* MAIN */
+@import "../components/carousel";
+@import "../components/item";
+@import "../components/product";
+@import "../utilities/mixins";
+
+.main {
+  &__carousel {
+    @include measures(120rem, auto);
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 80rem) {
+    &__carousel {
+      @include measures(95%, auto);
+    }
+  }
+
+  // MAIN: PRODUCTS
+  .products {
+    @include measures(120rem, auto);
+    margin: auto;
+    margin-top: 1rem;
+
+    // PRODUCTS
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+      grid-auto-rows: auto;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 80rem) {
+    .products {
+      @include measures(95%, auto);
+    }
+  }
+
+  // MAIN: CART
+  .cart {
+    @include measures(120rem, auto);
+    margin: 1rem auto;
+    display: none;
+
+    // CART: CONTAINER
+    &__container {
+      @include flex-base(column, 1rem);
+      @include measures(100%, auto);
+    }
+
+    // CART: ITEMS
+    &__items {
+      @include flex-base(column, 1rem);
+      @include measures(100%, auto);
+    }
+
+    // CART: SUMMARY
+    &__summary {
+      @include measures(100%, auto);
+
+      &--title {
+        @include flex-base(row, 0);
+        @include flex-alignment(start, center);
+        @include measures(auto, 6rem);
+        padding-left: 2rem;
+        background-color: #454546;
+      }
+
+      .summary {
+        @include flex-base(column, 1rem);
+        background-color: #161618;
+        padding: 1rem 0;
+
+        &__full,
+        &__discount,
+        &__total {
+          @include flex-base(row, 0);
+          @include flex-alignment(space-between, center);
+          padding: 0 1rem;
+        }
+
+        &__total--value {
+          color: #a153f9;
+        }
+
+        hr {
+          margin: 0 1rem;
+        }
+
+        &__buttons {
+          @include flex-base(row, 1rem);
+        }
+
+        &__proceed,
+        &__clear {
+          @include flex-base(row, 1rem);
+          @include flex-alignment(center, center);
+          @include measures(100%, auto);
+          padding: 1rem;
+          font-weight: 700;
+          font-size: 1.4rem;
+          border: none;
+        }
+
+        &__proceed {
+          background-color: #a153f9;
+          color: #161618;
+          margin-left: 1rem;
+        }
+
+        &__clear {
+          background-color: #da1106;
+          color: #ffffff;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    @media (max-width: 62.5rem) {
+      &__summary {
+        @include measures(100%, auto);
+      }
+    }
+  }
+
+  @media (max-width: 80rem) {
+    .cart {
+      @include measures(95%, auto);
+    }
+  }
+}
