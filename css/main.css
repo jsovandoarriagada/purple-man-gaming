@@ -306,6 +306,11 @@ html {
         justify-content: space-between;
         align-items: center;
         padding: 0 1rem; }
+      .main .cart__summary .summary__full--value {
+        text-decoration: line-through;
+        color: #a2a2a3; }
+      .main .cart__summary .summary__discount--value {
+        color: #da1106; }
       .main .cart__summary .summary__total--value {
         color: #a153f9; }
       .main .cart__summary .summary hr {
