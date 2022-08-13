@@ -3,6 +3,7 @@
 👉 It has the following characteristics:\
 1️⃣ Made with HTML, CSS, SCSS & JS.\
 2️⃣ Libraries → Toastify & SweetAlert 2.\
-3️⃣ Responsive.
+3️⃣ Single Page.\
+4️⃣ Responsive.
 
 
