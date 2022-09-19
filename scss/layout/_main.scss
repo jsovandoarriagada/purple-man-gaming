@@ -8,12 +8,13 @@
   &__carousel {
     @include measures(120rem, auto);
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
-  @media (max-width: 80rem) {
+  @media (max-width: 79.125rem) {
     &__carousel {
-      @include measures(95%, auto);
+      @include measures(100%, auto);
+      padding: 0 2rem;
     }
   }
 
@@ -21,21 +22,22 @@
   .products {
     @include measures(120rem, auto);
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     // PRODUCTS
     &__container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
       grid-auto-rows: auto;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      gap: 2rem;
+      margin-bottom: 2rem;
     }
   }
 
-  @media (max-width: 80rem) {
+  @media (max-width: 79.125rem) {
     .products {
-      @include measures(95%, auto);
+      @include measures(100%, auto);
+      padding: 0 2rem;
     }
   }
 

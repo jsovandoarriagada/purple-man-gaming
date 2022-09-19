@@ -11,20 +11,20 @@
   &__layout {
     @include flex-base(row, 0);
     @include flex-alignment(space-between, center);
-    @include measures(120rem, auto);
-    padding: 1.6rem 0;
+    @include measures(120rem, 5.5rem);
     margin: auto;
   }
 
-  @media (max-width: 80rem) {
+  @media (max-width: 79.125rem) {
     &__layout {
-      @include measures(95%, auto);
+      @include measures(100%, auto);
+      padding: 1.6rem 2rem;
     }
   }
 
   // HEADER: LOGO
   &__logo {
-    @include measures(auto, 2.6rem);
+    @include measures(auto, 2.8rem);
   }
 
   // HEADER: MENU
@@ -33,11 +33,12 @@
     @include flex-alignment(center, center);
 
     i {
-      font-size: 2.2rem;
-      color: #ffffff;
+      font-size: 2.6rem;
+      color: #a2a2a2;
+      transition: 0.3s;
 
       &:hover {
-        color: #a153f9;
+        color: #ffffff;
       }
     }
   }
