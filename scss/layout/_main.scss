@@ -51,6 +51,8 @@
     &__container {
       @include flex-base(column, 1rem);
       @include measures(100%, auto);
+      margin: 0;
+      padding: 0;
     }
 
     // CART: ITEMS
@@ -137,9 +139,10 @@
     }
   }
 
-  @media (max-width: 80rem) {
+  @media (max-width: 79.125rem) {
     .cart {
-      @include measures(95%, auto);
+      @include measures(100%, auto);
+      padding: 0 2rem;
     }
   }
 }
