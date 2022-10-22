@@ -42,6 +42,12 @@ html {
     flex-direction: column;
     gap: 0; }
 
+/* DISABLE TEXT SELECTION */
+.disableTextSelection {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 /* HEADER */
 .header {
   background-color: #161618;
@@ -290,16 +296,6 @@ html {
   .main .cart__summary {
     width: 100%;
     height: auto; }
-    .main .cart__summary--title {
-      display: flex;
-      flex-direction: row;
-      gap: 0;
-      justify-content: start;
-      align-items: center;
-      width: auto;
-      height: 6rem;
-      padding-left: 2rem;
-      background-color: #454546; }
     .main .cart__summary .summary {
       display: flex;
       flex-direction: column;

@@ -65,14 +65,6 @@
     &__summary {
       @include measures(100%, auto);
 
-      &--title {
-        @include flex-base(row, 0);
-        @include flex-alignment(start, center);
-        @include measures(auto, 6rem);
-        padding-left: 2rem;
-        background-color: #454546;
-      }
-
       .summary {
         @include flex-base(column, 1rem);
         background-color: #161618;

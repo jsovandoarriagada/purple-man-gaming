@@ -163,12 +163,9 @@ const featureNotAvailable = () => {
   // USE A SWEETALERT 2 "FEATURE NOT AVAILABLE" MODAL
   Swal.fire({
     color: "#ffffff",
-    title: "FEATURE NOT AVAILABLE",
+    title: "SUCCESSFUL PURCHASE!",
     background: "#454546",
     showConfirmButton: false,
-    imageUrl: "./img/alert.png",
-    imageWidth: 96,
-    imageHeight: 85,
   });
 };
 
